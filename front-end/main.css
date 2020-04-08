@@ -11,6 +11,7 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
+    
     padding: 20px;
     margin: 0;
     background-color: var(--back);
@@ -101,7 +102,6 @@ header li a:hover{
 .login{
     min-height: 500px;
     background-image: linear-gradient(var(--orange) ,var(--brown));
-
     width: 80%;
     padding: 20px;
     text-align: center;
@@ -110,27 +110,42 @@ header li a:hover{
     /* font-weight: bolder; */
     margin: auto;
     border-radius: 7px;
-    
+    transform: skewX(45deg);
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.363);
-    animation-name: display-login;
+    animation-name: display-form;
     animation-duration: 3s;
     /* animation-iteration-count: infinite; */
     animation-fill-mode: forwards;
+    border-bottom-right-radius: 300px;
+    border-bottom-left-radius: 300px;
 }
-@keyframes display-login{
+@keyframes display-form{
     0%{
-        background-color:var(--orange); 
         transform: scale(1.1);
+        font-size: 3px;
         font-size: 16px;
         color: var(--white);
-        width: 80%;
+        width: 20%;
         text-transform: lowercase;
+        /* */
+    }
+    30%{
+        width: 50%;
+        font-size: 10px;
+        
     }
     50%{
         background-color: var(--brown);
         color: var(--white);
         width:60%;
+        font-size: 12px;
+        
   ;
+    }
+    70%{
+        width: 70%;
+        font-size: 16px;
+        /* transform: skewX(45deg); */
     }
     100%{
         background-image:linear-gradient(24deg,var(--orange),var(--brown));
@@ -139,6 +154,7 @@ header li a:hover{
         font-weight: bold;
         width:80%;
         transform: scale(1.0);
+        
         
     }
 }
@@ -160,7 +176,15 @@ header li a:hover{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    animation-name: display-div;
+    animation-duration: 2s;
 
+}
+@keyframes display-div{
+    0%{
+        display: none;
+    }
+    50
 }
 .card-content img{
     max-width: 100%;
@@ -252,4 +276,9 @@ header li a:hover{
     border-radius: 7px;
     text-decoration: none;
     cursor: pointer;
+}
+
+.mybtn:hover{
+  background-color: var(--brown);
+  color: var(--whitish);
 }
