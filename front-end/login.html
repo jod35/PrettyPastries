@@ -5,32 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Pacifico&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <header>
+        <h1 class="logo">Pretty Pastries</h1>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="login.html">Login</a></li>
             <li><a href="register.html">Sign Up</a></li>
         </ul>
     </header>
+
+    <form action="" method="POST">
     <div class="login">
+
         <h1>Login Form</h1>
         <div class="form">
             <p>Username or Email</p>
-            <input type="text" id="" class="myfield">
+            <input type="text" id="prompt" required class="myfield">
         </div>
+
         <div class="form">
             <p>Password</p>
-            <input type="password" id="" class="myfield">
+            <input type="password" required id="login-password" class="myfield">
         </div>
+
         <div class="form">
-            <button type="submit" id="mybtn">Login</button>
+            <button type="submit" class="mybtn" id="login">Login</button>
         </div>
         <small>Do not have an account, <a href="register.html">Register</a></small>
     </div>
+</form>
     
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/form_validation.js"></script>
 </body>
 </html>
