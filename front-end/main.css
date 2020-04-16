@@ -60,6 +60,8 @@ header li a:hover{
 }
 .container{
     padding: 20px;
+    /* background-image: linear-gradient(24deg,var(--brown),var(--orange)) */
+    background-color: var(--brown);
 }
 .Welcome{
     height: 30vh;
@@ -73,9 +75,19 @@ header li a:hover{
      /* animation-iteration-count: infinite; */
      animation-fill-mode: forwards;
 }
-.Welcome:hover{
-
-
+ h2{
+    text-align: center;
+}
+@media (max-width:500px){
+    .login{
+        width:80%;
+    }
+    header ul{
+        height: 200px;
+    }
+    .header li a{
+        width: 100%;
+    }
 }
 @keyframes display{
     0%{
@@ -88,21 +100,20 @@ header li a:hover{
     50%{
         background-color: var(--brown);
         color: var(--white);
-        border-bottom-left-radius: 300px;
+        border-top-left-radius: 300px;
     }
     100%{
         background-image:linear-gradient(24deg,var(--orange),var(--brown));
         color: var(--white);
         text-transform: capitalize;
         transform: scale(1.0);
-        border-bottom-right-radius: 300px;
-        border-bottom-left-radius: 300px;
+        border-top-right-radius: 500px;
+        border-top-left-radius: 500px;
     }
 }
 .login{
     min-height: 500px;
     background-image: linear-gradient(var(--orange) ,var(--brown));
-    width: 80%;
     padding: 20px;
     text-align: center;
     color: var(--whitish);
@@ -116,8 +127,7 @@ header li a:hover{
     animation-duration: 3s;
     /* animation-iteration-count: infinite; */
     animation-fill-mode: forwards;
-    border-bottom-right-radius: 300px;
-    border-bottom-left-radius: 300px;
+    
 }
 @keyframes display-form{
     0%{
@@ -198,6 +208,7 @@ header li a:hover{
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.342);
     border-radius: 7px;
     margin: 10px;
+    
 }
 /* .card-content p{
     display: none;
@@ -205,7 +216,7 @@ header li a:hover{
 
 .card-content:hover{
     animation-name: enlarge;
-    animation-duration:5s ;
+    animation-duration:2s ;
     animation-fill-mode: forwards;
 }
 
@@ -223,8 +234,9 @@ header li a:hover{
 
     }
     100%{
-        background-color:var(--brown);
-        color: var(--white);
+        background-color:var(--white);
+        color: var(--brown);
+        transform: scale(1.2);
         
     }
 }
