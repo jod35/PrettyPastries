@@ -300,6 +300,7 @@ header li a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 .error-message{
     color: var(--brown);
