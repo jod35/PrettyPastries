@@ -1,6 +1,8 @@
 from . import app,db
-from flask import render_template,redirect,flash,url_for
-
+from flask import render_template,redirect,flash,url_for,request
+from .models import User
+from werkzeug.security import generate_password_hash,check_password_hash
+from .auth import create_user_account
 
 #home page
 @app.route('/')
@@ -11,8 +13,24 @@ def home_page():
 def login_page():
     return render_template('login.html')
 
-@app.route('/signup')
+@app.route('/signup',methods=['GET', 'POST'])
 def register():
+    if request.method == 'POST':
+        username = request.form.get('username')
+        email = request.form.get('email')
+        password =request.form.get('password')
+
+        print(username,email,password)
+
+        user_exists=(User.query.filter_by(username=username).first() or 
+            User.query.filter_by(email=email).first())
+
+        if user_exists:
+            flash("The user already exists!!")
+        else:
+            create_user_account(username,email,password)
+            flash("Account Created Successfully!!")
+            return redirect(url_for('login_page'))
     return render_template('register.html')
     
 

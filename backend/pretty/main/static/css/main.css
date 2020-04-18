@@ -113,11 +113,11 @@ header li a:hover{
 }
 .login{
     min-height: 500px;
-    background-image: linear-gradient(var(--orange) ,var(--brown));
+    /* background-image: linear-gradient(var(--orange) ,var(--brown)); */
     padding: 20px;
     text-align: center;
-    color: var(--whitish);
-    opacity: 30%;
+    color: var(--white);
+    
     /* font-weight: bolder; */
     margin: auto;
     border-radius: 7px;
@@ -158,14 +158,13 @@ header li a:hover{
         /* transform: skewX(45deg); */
     }
     100%{
-        background-image:linear-gradient(24deg,var(--orange),var(--brown));
+        /* background-image:linear-gradient(24deg,var(--orange),var(--brown)); */
+        background-color: brown;
         color: var(--white);
         text-transform: capitalize;
         font-weight: bold;
         width:80%;
         transform: scale(1.0);
-        
-        
     }
 }
 .form{
@@ -306,5 +305,9 @@ header li a:hover{
     color: var(--brown);
     font-size: 40px;
     font-weight: bolder;
+}
 
+.flash-messages{
+    background-color: red;
+    color: white;
 }

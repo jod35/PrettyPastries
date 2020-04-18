@@ -1,23 +1,32 @@
 {% extends 'base.html' %}
 {% block body %}
-<form action="" method="POST">
+<form action="{{url_for('register')}}" method="POST">
     <div class="login">
         <h1>Create Account</h1>
+        <div class="flash-message">
+            {% with messages =get_flashed_messages()  %}
+                {% for message in  messages%}
+                    <div class="message">
+                        {{message}}
+                    </div>
+                {% endfor %}
+            {% endwith %}
+        </div>
         <div class="form">
             <p>Username </p>
-            <input type="text"  required id="username" class="myfield">
+            <input type="text" name="username" required id="username" class="myfield">
         </div>
         <div class="form">
             <p>Email </p>
-            <input type="text" required id="email" class="myfield">
+            <input type="text" required name="email" id="email" class="myfield">
         </div>
         <div class="form">
             <p>Password</p>
-            <input type="password" required id="password" class="myfield">
+            <input type="password" name="password" required id="password" class="myfield">
         </div>
         <div class="form">
             <p> Confirm Password</p>
-            <input type="password" id="confirm" required class="myfield">
+            <input type="password" id="confirm" name="confirm" required class="myfield">
         </div>
         <div class="form">
             <button type="submit" class="mybtn" id="register">Register</button>
