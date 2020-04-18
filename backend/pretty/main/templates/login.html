@@ -6,6 +6,15 @@
     <div class="login">
 
         <h1>Login Form</h1>
+        <div class="flash-message">
+            {% with messages =get_flashed_messages()  %}
+                {% for message in  messages%}
+                    <div class="message">
+                        {{message}}
+                    </div>
+                {% endfor %}
+            {% endwith %}
+        </div>
         <div class="form">
             <p>Username or Email</p>
             <input type="text" name="form" id="prompt" required class="myfield">
