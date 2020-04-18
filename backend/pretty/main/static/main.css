@@ -294,3 +294,16 @@ header li a:hover{
   background-color: var(--brown);
   color: var(--whitish);
 }
+
+.error{
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.error-message{
+    color: var(--brown);
+    font-size: 40px;
+    font-weight: bolder;
+
+}
