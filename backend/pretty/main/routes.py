@@ -35,14 +35,19 @@ def register():
             User.query.filter_by(email=email).first())
 
         if user_exists:
-            flash("The user already exists!!")
+            flash("The user already exists!! \nTry using another email or username")
+            return redirect(url_for('register'))
         else:
             create_user_account(username,email,password)
             flash("Account Created Successfully!!")
             return redirect(url_for('login_page'))
     return render_template('register.html')
 
-r
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('home_page'))
+   
 
 @app.errorhandler(404)
 def not_found(error):

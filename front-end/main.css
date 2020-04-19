@@ -294,3 +294,45 @@ header li a:hover{
   background-color: var(--brown);
   color: var(--whitish);
 }
+
+.options{
+    background-color:brown;
+    text-transform: uppercase;
+    width: 20%;
+    margin: 0;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.342);
+    border-radius: 7px;
+    opacity: 10%;
+}
+
+.options a{
+    text-decoration: none;
+    color: var(--white);
+    padding: 20px;
+}
+.options ul li{
+ display: block;
+ padding: 20px;
+ /* border:1px solid var(--white);     */
+}
+
+.options li :hover{
+    color: var(--whitish);
+} 
+
+.main{
+    display: flex;
+}
+.home{
+    margin: 0px 20px 0px 20px ;
+    border-radius: 7px;
+    min-height: 500px;
+}
+.card-price-content{
+    width: 20%;
+    margin: 20px;
+}
+.small{
+    width:300px;
+    background-color: var(--bro);
+}
