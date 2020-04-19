@@ -18,7 +18,7 @@ def check_user(prompt):
         flash("User doesnot exist")
         return redirect('login')
 
-    return user
+   
 
     
 
